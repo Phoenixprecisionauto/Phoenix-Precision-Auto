@@ -174,3 +174,25 @@ footer {
     text-align: center;
     margin-top: 2rem;
 }
+
+/* Social Media Icons in Footer */
+.social-media {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media a img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media a img:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+    filter: brightness(1.2); /* Brighten icon on hover */
+}
