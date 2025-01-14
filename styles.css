@@ -23,11 +23,6 @@ p {
     font-size: 1.2rem;
 }
 
-#content {
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -55,38 +50,56 @@ p {
     transform: scale(1.1);
 }
 
-section {
-    padding: 2rem 0;
+/* Pricing Section Styles */
+#pricing {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
-/* Warranty Section Styles */
-#warranty {
-    background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
-    color: #f0f0f0; /* Light text for readability */
-    padding: 3rem 2rem;
-    text-align: left;
-}
-
-#warranty h2, #warranty h3 {
-    color: #ffa500; /* Highlight headings in orange */
+#pricing h2 {
+    color: #ffa500;
     margin-bottom: 1rem;
 }
 
-#warranty ul, #warranty ol {
-    margin: 1rem 0 1.5rem;
-    padding-left: 1.5rem;
-}
-
-#warranty ul li, #warranty ol li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-#warranty p {
+.pricing-item {
     margin-bottom: 1.5rem;
-    line-height: 1.8;
-    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+.pricing-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.toggle-button {
+    background: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.toggle-button:hover {
+    background: #ff8800;
+}
+
+.details {
+    display: none;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.details p {
+    margin: 0.5rem 0;
 }
 
 form label {
