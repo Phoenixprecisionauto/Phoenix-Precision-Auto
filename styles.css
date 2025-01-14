@@ -2,32 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* Set text color to white for better contrast */
+    color: #fff;
     background: url('logo.jpg') no-repeat center center fixed;
     background-size: cover;
-}
-
-/* Add an overlay to sections for better text contrast */
-section {
-    position: relative;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
-}
-
-section > * {
-    position: relative;
-    z-index: 2;
 }
 
 /* Header and Footer */
@@ -38,31 +15,47 @@ header, footer {
     color: #fff;
 }
 
-/* Headings and Paragraphs */
-h1, h2, h3, p {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+/* Hero Section */
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3rem 0;
+    text-align: center;
 }
 
-/* Hero Section Button */
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
+/* Call-to-Action Banner */
+#cta {
+    background: #ffa500; /* Bright orange background */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#cta .cta-button {
     padding: 10px 20px;
-    background: #ffa500;
+    background: #333; /* Dark button for contrast */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-    text-shadow: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
-    background: #ff8800;
+#cta .cta-button:hover {
+    background: #555; /* Lighter hover effect */
 }
 
-/* Pricing Section Styles */
+/* Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
@@ -83,10 +76,10 @@ h1, h2, h3, p {
     background: #f9f9f9;
 }
 
-.pricing-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
+/* Buttons */
+.cta-button {
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .toggle-button {
@@ -94,63 +87,17 @@ h1, h2, h3, p {
     color: #fff;
     border: none;
     padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
     border-radius: 5px;
-    font-size: 1rem;
+    cursor: pointer;
 }
 
 .toggle-button:hover {
     background: #ff8800;
 }
 
-.details {
-    display: none;
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.details p {
-    margin: 0.5rem 0;
-}
-
-/* Contact Form */
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-form input, form textarea, form button {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-form button:hover {
-    background: #555;
-}
-
 /* Footer */
 footer {
     padding: 1rem 0;
-    text-align: center;
     margin-top: 2rem;
+    text-align: center;
 }
