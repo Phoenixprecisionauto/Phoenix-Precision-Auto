@@ -2,32 +2,21 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* Set text color to white for better contrast */
+    color: #fff; /* White text for better contrast */
     background: url('logo.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Add an overlay to sections for better text contrast */
-section {
-    position: relative;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-section::before {
+/* Add a semi-transparent overlay to improve contrast */
+body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
-}
-
-section > * {
-    position: relative;
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% transparency */
+    z-index: -1; /* Keep it behind content */
 }
 
 /* Header and Footer */
@@ -40,29 +29,62 @@ header, footer {
 
 /* Headings and Paragraphs */
 h1, h2, h3, p {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+    color: #fff; /* White text */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add subtle shadow for readability */
 }
 
-/* Hero Section Button */
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
+/* Section Background Box for Text */
+section {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black box */
+    padding: 2rem 0;
+    color: #fff; /* White text inside sections */
+}
+
+section h2 {
+    color: #ffa500; /* Highlight section titles in orange */
+}
+
+/* Hero Section */
+.hero {
+    background: rgba(0, 0, 0, 0.5); /* Darken the hero section */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Call-to-Action Section */
+#cta {
+    background: #ffa500; /* Bright orange */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#cta .cta-button {
     padding: 10px 20px;
-    background: #ffa500;
+    background: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-    text-shadow: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
-    background: #ff8800;
+#cta .cta-button:hover {
+    background: #555;
 }
 
-/* Pricing Section Styles */
+/* Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
@@ -94,10 +116,8 @@ h1, h2, h3, p {
     color: #fff;
     border: none;
     padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
     border-radius: 5px;
-    font-size: 1rem;
+    cursor: pointer;
 }
 
 .toggle-button:hover {
