@@ -2,55 +2,60 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #f0f0f0;
+    color: #fff;
     background: url('logo.jpg') no-repeat center center fixed;
     background-size: cover;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+/* Header and Footer */
 header, footer {
     background: rgba(0, 0, 0, 0.8);
     padding: 1rem 0;
     text-align: center;
+    color: #fff;
 }
 
-h1, h2 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* Hero Section */
 .hero {
     background: rgba(0, 0, 0, 0.5);
     padding: 3rem 0;
     text-align: center;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
+/* Call-to-Action Section */
+#cta {
+    background: #ffa500; /* Bright orange for attention */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#cta .cta-button {
     padding: 10px 20px;
     background: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
+#cta .cta-button:hover {
+    background: #555;
 }
 
-/* Pricing Section Styles */
+/* Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
@@ -71,72 +76,22 @@ p {
     background: #f9f9f9;
 }
 
-.pricing-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-}
-
+/* Toggle Button */
 .toggle-button {
     background: #ffa500;
     color: #fff;
     border: none;
     padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
     border-radius: 5px;
-    font-size: 1rem;
+    cursor: pointer;
 }
 
 .toggle-button:hover {
     background: #ff8800;
 }
 
-.details {
-    display: none;
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.details p {
-    margin: 0.5rem 0;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-form input, form textarea, form button {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-form button:hover {
-    background: #555;
-}
-
+/* Footer */
 footer {
     padding: 1rem 0;
     text-align: center;
-    margin-top: 2rem;
 }
