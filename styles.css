@@ -1,25 +1,11 @@
-
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #f0f0f0; /* Light grey text for better contrast */
+    color: #f0f0f0;
     background: url('logo.jpg') no-repeat center center fixed;
     background-size: cover;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Enhances text visibility */
-    position: relative;
-}
-
-/* Add a semi-transparent overlay to improve contrast */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
-    z-index: -1; /* Keeps it behind the content */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 header, footer {
@@ -72,6 +58,35 @@ p {
 section {
     padding: 2rem 0;
     text-align: center;
+}
+
+/* Warranty Section Styles */
+#warranty {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+    color: #f0f0f0; /* Light text for readability */
+    padding: 3rem 2rem;
+    text-align: left;
+}
+
+#warranty h2, #warranty h3 {
+    color: #ffa500; /* Highlight headings in orange */
+    margin-bottom: 1rem;
+}
+
+#warranty ul, #warranty ol {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.5rem;
+}
+
+#warranty ul li, #warranty ol li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+#warranty p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 form label {
