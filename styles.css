@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     margin: 0;
@@ -27,21 +28,37 @@ header, footer {
     color: #fff;
 }
 
-/* Headings and Paragraphs */
-h1, h2, h3, p {
-    color: #fff; /* White text */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add subtle shadow for readability */
+/* Title Styling */
+header h1 {
+    color: #ffa500; /* Orange title */
+    font-weight: bold; /* Bold the title */
+    text-shadow: none; /* Remove shadow for sharper look */
 }
 
-/* Section Background Box for Text */
-section {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black box */
-    padding: 2rem 0;
-    color: #fff; /* White text inside sections */
+/* Navigation Menu */
+header nav ul {
+    list-style: none; /* Remove dots from navigation menu */
+    padding: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the menu items */
+    gap: 20px; /* Add spacing between items */
 }
 
-section h2 {
-    color: #ffa500; /* Highlight section titles in orange */
+header nav ul li a {
+    color: #ffa500; /* Orange for navigation links */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff8800; /* Slightly darker orange on hover */
+}
+
+/* Section Headings */
+h2 {
+    color: #ffa500; /* Consistent orange for all headings */
 }
 
 /* Hero Section */
@@ -51,49 +68,16 @@ section h2 {
     text-align: center;
 }
 
-/* Call-to-Action Section */
-#cta {
-    background: #ffa500; /* Bright orange */
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-}
-
-#cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-}
-
-#cta p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-#cta .cta-button {
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease;
-}
-
-#cta .cta-button:hover {
-    background: #555;
-}
-
-/* Pricing Section */
+/* Service Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    color: #333; /* Sharper text color */
     padding: 3rem 2rem;
     text-align: center;
 }
 
 #pricing h2 {
-    color: #ffa500;
+    color: #ffa500; /* Consistent orange for pricing header */
     margin-bottom: 1rem;
 }
 
@@ -108,30 +92,8 @@ section h2 {
 .pricing-item h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333;
-}
-
-.toggle-button {
-    background: #ffa500;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.toggle-button:hover {
-    background: #ff8800;
-}
-
-.details {
-    display: none;
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.details p {
-    margin: 0.5rem 0;
+    color: #333; /* Sharper text color */
+    text-shadow: none; /* Remove text shadow */
 }
 
 /* Contact Form */
@@ -175,24 +137,8 @@ footer {
     margin-top: 2rem;
 }
 
-/* Social Media Icons in Footer */
-.social-media {
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.social-media a {
+footer .social-media a img {
+    width: 30px;
+    height: 30px;
     margin: 0 10px;
-    display: inline-block;
-}
-
-.social-media a img {
-    width: 40px; /* Icon size */
-    height: 40px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-media a img:hover {
-    transform: scale(1.2); /* Zoom effect on hover */
-    filter: brightness(1.2); /* Brighten icon on hover */
 }
