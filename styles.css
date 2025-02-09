@@ -4,8 +4,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #fff; /* White text for better contrast */
-    background: url('background.png') no-repeat center center fixed;
-    background-size: auto 50%; /* Adjusts height while maintaining aspect ratio */;
+    background: url('logo.jpg') no-repeat center center fixed;
+    background-size: auto 80%; /* Adjusts height while maintaining aspect ratio */;
 }
 
 /* Add a semi-transparent overlay to improve contrast */
