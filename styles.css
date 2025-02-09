@@ -1,14 +1,17 @@
-
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* White text for better contrast */
+    color: #fff;
     background: url('logo.jpg') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all content horizontally */
+    text-align: center; /* Centers text inside elements */
 }
 
-/* Add a semi-transparent overlay to improve contrast */
+/* Overlay for Contrast */
 body::before {
     content: '';
     position: fixed;
@@ -16,129 +19,72 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% transparency */
-    z-index: -1; /* Keep it behind content */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
-/* Header and Footer */
+/* Centered Header & Footer */
 header, footer {
+    width: 100%;
     background: rgba(0, 0, 0, 0.8);
     padding: 1rem 0;
     text-align: center;
-    color: #fff;
 }
 
-/* Title Styling */
-header h1 {
-    color: #ffa500; /* Orange title */
-    font-weight: bold; /* Bold the title */
-    text-shadow: none; /* Remove shadow for sharper look */
-}
-
-/* Navigation Menu */
+/* Navigation Menu Centering */
 header nav ul {
-    list-style: none; /* Remove dots from navigation menu */
+    list-style: none;
     padding: 0;
-    display: flex; /* Align items horizontally */
-    justify-content: center; /* Center the menu items */
-    gap: 20px; /* Add spacing between items */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-header nav ul li a {
-    color: #ffa500; /* Orange for navigation links */
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+/* Container for Centering Sections */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-header nav ul li a:hover {
-    color: #ff8800; /* Slightly darker orange on hover */
-}
-
-/* Section Headings */
-h2 {
-    color: #ffa500; /* Consistent orange for all headings */
-}
-
-/* Hero Section */
+/* Center Hero Section */
 .hero {
-    background: rgba(0, 0, 0, 0.5); /* Darken the hero section */
-    padding: 3rem 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust for vertical centering */
+    width: 100%;
 }
 
-/* Service Pricing Section */
+/* Centering Service Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
-    color: #333; /* Sharper text color */
+    color: #333;
     padding: 3rem 2rem;
-    text-align: center;
+    width: 100%;
+    max-width: 800px;
 }
 
-#pricing h2 {
-    color: #ffa500; /* Consistent orange for pricing header */
-    margin-bottom: 1rem;
-}
-
-.pricing-item {
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    background: #f9f9f9;
-}
-
-.pricing-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333; /* Sharper text color */
-    text-shadow: none; /* Remove text shadow */
-}
-
-/* Contact Form */
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
+/* Centering Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form input, form textarea, form button {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-form button:hover {
-    background: #555;
-}
-
-/* Footer */
-footer {
-    padding: 1rem 0;
     text-align: center;
-    margin-top: 2rem;
 }
 
-footer .social-media a img {
+/* Centering Social Media Icons */
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .social-media img {
     width: 30px;
     height: 30px;
-    margin: 0 10px;
 }
