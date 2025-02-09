@@ -5,8 +5,8 @@ body {
     font-family: Arial, sans-serif;
     color: #fff; /* White text for better contrast */
     background: url('logo.jpg') no-repeat;
-    background-size: 40%; /* Adjust percentage or use px (e.g., 300px) for smaller image */
-    background-position: top right; /* Move image to top-right */
+    background-size: 90%; /* Adjust percentage or use px (e.g., 300px) for smaller image */
+    background-position: no-repeat center center fixed; /* Move image to top-right */
     background-attachment: fixed; /* Keeps background fixed when scrolling */;
 }
 
