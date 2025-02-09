@@ -11,8 +11,7 @@
         <div class="container">
             <h1>Phoenix Precision Auto</h1>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-                <ul class="nav-menu">
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#diagnostics">Diagnostics</a></li>
@@ -33,7 +32,7 @@
         </div>
     </section>
 
-    <section id="services" class="responsive-section">
+    <section id="services">
         <div class="container">
             <h2>Our Services</h2>
             <ul>
@@ -46,7 +45,7 @@
         </div>
     </section>
 
-    <section id="diagnostics" class="responsive-section">
+    <section id="diagnostics">
         <div class="container">
             <h2>Diagnostic Process</h2>
             <p>We specialize in identifying and resolving vehicle issues correctly the first time.</p>
@@ -57,24 +56,50 @@
                 <li>Inspect critical components.</li>
                 <li>Perform necessary repairs and verify resolution.</li>
             </ol>
+            <h3>Pricing</h3>
+            <ul>
+                <li>First-time customers: No diagnostic fee</li>
+                <li>Returning customers: $100 (applied toward labor if repair is completed)</li>
+                <li>If repair is declined: $100 fee retained for service time</li>
+            </ul>
         </div>
     </section>
 
-    <section id="pricing" class="responsive-section">
+    <section id="pricing">
         <div class="container">
             <h2>Service Pricing</h2>
             <p>Labor is $45 per hour. Prices vary based on vehicle and accessibility.</p>
+            <ul>
+                <li><strong>Valve Cover Gasket:</strong> Starts at $135 (3 hours)</li>
+                <li><strong>Brake Repairs:</strong> Starts at $90 (2 hours per axle)</li>
+                <li><strong>Suspension Work:</strong> Starts at $135 (3 hours)</li>
+                <li><strong>Radiator & Fan Replacement:</strong> Starts at $180 (4 hours)</li>
+                <li><strong>General Maintenance:</strong> $45 per hour</li>
+            </ul>
+            <p><em>Contact us for a custom quote.</em></p>
         </div>
     </section>
 
-    <section id="about" class="responsive-section">
+    <section id="about">
         <div class="container">
             <h2>About Us</h2>
             <p>We are dedicated to providing high-quality, reliable auto repair services in Phoenix, AZ.</p>
         </div>
     </section>
 
-    <section id="contact" class="responsive-section">
+    <section id="warranty">
+        <div class="container">
+            <h2>Service Warranty</h2>
+            <ul>
+                <li>Labor Warranty: 30 days</li>
+                <li>Parts Warranty: Manufacturer’s coverage</li>
+                <li>Labor Discount for Part Replacement: 50% off labor rate</li>
+                <li>Travel Fee: $20 if over 10 miles</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <p>📍 Phoenix, AZ | 📞 (602)-641-1159 | 📧 info@phoenixprecisionauto.com</p>
@@ -102,10 +127,6 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
