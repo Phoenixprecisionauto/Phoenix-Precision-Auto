@@ -1,10 +1,10 @@
-
+cwdw
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #fff; /* White text for better contrast */
-    background: url('logo.jpg') no-repeat center center fixed;
+    background: url('Cover.png') no-repeat center center fixed;
     background-size: auto 50%; /* Adjusts height while maintaining aspect ratio */;
 }
 
