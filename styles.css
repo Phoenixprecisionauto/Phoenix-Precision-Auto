@@ -4,8 +4,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #fff; /* White text for better contrast */
-    background: url('logo.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('logo.jpg') no-repeat;
+    background-size: 40%; /* Adjust percentage or use px (e.g., 300px) for smaller image */
+    background-position: top right; /* Move image to top-right */
+    background-attachment: fixed; /* Keeps background fixed when scrolling */;
 }
 
 /* Add a semi-transparent overlay to improve contrast */
