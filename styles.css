@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     margin: 0;
@@ -35,75 +36,34 @@ header h1 {
 }
 
 /* Navigation Menu */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-}
-
-header nav {
-    position: relative;
-}
-
-.nav-menu {
-    list-style: none;
+header nav ul {
+    list-style: none; /* Remove dots from navigation menu */
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the menu items */
+    gap: 20px; /* Add spacing between items */
 }
 
-.nav-menu li a {
-    color: #ffa500;
+header nav ul li a {
+    color: #ffa500; /* Orange for navigation links */
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.nav-menu li a:hover {
-    color: #ff8800;
-}
-
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu li {
-        display: block;
-        padding: 10px;
-    }
+header nav ul li a:hover {
+    color: #ff8800; /* Slightly darker orange on hover */
 }
 
 /* Section Headings */
 h2 {
-    color: #ffa500;
+    color: #ffa500; /* Consistent orange for all headings */
 }
 
 /* Hero Section */
 .hero {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Darken the hero section */
     padding: 3rem 0;
     text-align: center;
 }
@@ -111,13 +71,13 @@ h2 {
 /* Service Pricing Section */
 #pricing {
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    color: #333; /* Sharper text color */
     padding: 3rem 2rem;
     text-align: center;
 }
 
 #pricing h2 {
-    color: #ffa500;
+    color: #ffa500; /* Consistent orange for pricing header */
     margin-bottom: 1rem;
 }
 
@@ -132,7 +92,8 @@ h2 {
 .pricing-item h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333;
+    color: #333; /* Sharper text color */
+    text-shadow: none; /* Remove text shadow */
 }
 
 /* Contact Form */
