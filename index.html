@@ -1,165 +1,174 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('logo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix Precision Auto</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Phoenix Precision Auto</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#diagnostics">Diagnostics</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#warranty">Service Warranty</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Add a semi-transparent overlay to improve contrast */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Reliable Auto Repairs in Phoenix, AZ</h2>
-            <p>Affordable, professional service you can trust. Book your appointment today!</p>
-            <a href="#contact" class="cta-button">Contact Us</a>
-        </div>
-    </section>
+/* Header and Footer */
+header, footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+}
 
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Valve cover gasket replacements</li>
-                <li>Brake repairs</li>
-                <li>Suspension work</li>
-                <li>Radiator and fan replacements</li>
-                <li>General maintenance</li>
-            </ul>
-        </div>
-    </section>
+/* Title Styling */
+header h1 {
+    color: #ffa500;
+    font-weight: bold;
+}
 
-    <section id="diagnostics">
-        <div class="container">
-            <h2>Our Diagnostic Process</h2>
-            <p>At Phoenix Precision Auto, we specialize in identifying and resolving vehicle issues accurately the first time.</p>
-            <h3>How We Diagnose</h3>
-            <ul>
-                <li><strong>Step 1:</strong> Understand the customer's concern.</li>
-                <li><strong>Step 2:</strong> Use advanced diagnostic tools to identify the issue.</li>
-                <li><strong>Step 3:</strong> Inspect critical components to pinpoint the root cause.</li>
-                <li><strong>Step 4:</strong> Perform necessary repairs and confirm the issue is resolved.</li>
-            </ul>
-            <h3>Why Choose Us?</h3>
-            <p>We prioritize fixing the problem correctly the first time, saving you time, money, and frustration.</p>
-            <h3>Pricing</h3>
-            <ul>
-                <li><strong>First-Time Customers:</strong> No diagnostic fee – it's on us!</li>
-                <li><strong>Returning Customers:</strong> $100 diagnostic fee, applied toward labor if we complete the repair.</li>
-                <li><strong>If You Decide Otherwise:</strong> The diagnostic fee will be retained to cover our time and expertise.</li>
-            </ul>
-        </div>
-    </section>
+/* Navigation Menu - Mobile Friendly */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <section id="pricing">
-        <div class="container">
-            <h2>Service Pricing</h2>
-            <p>Our pricing is based on estimated labor times multiplied by our hourly rate of $45 per hour.</p>
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
 
-            <div class="pricing-item">
-                <h3>Valve Cover Gasket Replacement</h3>
-                <p><strong>Starts at $135</strong> (Estimated 3 hours of labor, may vary based on engine type and accessibility)</p>
-            </div>
+header nav ul li {
+    flex: 1;
+    text-align: center;
+}
 
-            <div class="pricing-item">
-                <h3>Brake Repairs (Pads & Rotors)</h3>
-                <p><strong>Starts at $90</strong> (Estimated 2 hours of labor per axle, varies by vehicle)</p>
-            </div>
+header nav ul li a {
+    color: #ffa500;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-            <div class="pricing-item">
-                <h3>Suspension Work (Control Arms, Struts, etc.)</h3>
-                <p><strong>Starts at $135</strong> (Estimated 3 hours, varies depending on parts replaced)</p>
-            </div>
+header nav ul li a:hover {
+    color: #ff8800;
+}
 
-            <div class="pricing-item">
-                <h3>Radiator & Fan Replacement</h3>
-                <p><strong>Starts at $180</strong> (Estimated 4 hours, varies by vehicle make/model)</p>
-            </div>
+/* Responsive Hero Section */
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+}
 
-            <div class="pricing-item">
-                <h3>General Maintenance (Oil Change, Tune-Ups, etc.)</h3>
-                <p><strong>$45 per hour</strong> (Labor time varies based on the job)</p>
-            </div>
+/* Service Pricing Section */
+#pricing {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 3rem 1rem;
+    text-align: center;
+}
 
-            <p><em>Pricing may vary depending on the vehicle, parts, and labor required. Contact us for a custom quote!</em></p>
-        </div>
-    </section>
+.pricing-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #f9f9f9;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>At Phoenix Precision Auto, we are dedicated to providing reliable, high-quality auto repair services.</p>
-        </div>
-    </section>
+.pricing-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
 
-    <section id="warranty">
-        <div class="container">
-            <h2>Service Warranty</h2>
-            <p>Our warranty ensures peace of mind with the following coverage:</p>
-            <ul>
-                <li><strong>Labor Warranty:</strong> 30 days from the date of service.</li>
-                <li><strong>Parts Warranty:</strong> Covered under manufacturer’s warranty.</li>
-                <li><strong>Labor Discount for Part Replacement:</strong> 50% off normal labor rate.</li>
-                <li><strong>Travel Policy:</strong> If over 10 miles, a $20 travel fee applies.</li>
-            </ul>
-        </div>
-    </section>
+/* Contact Form - Mobile Friendly */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>📍 Located in Phoenix, AZ</p>
-            <p>📞 Call: (602)-641-1159</p>
-            <p>📧 Email: info@Phoenixprecisionauto.com</p>
-            <form action="https://formspree.io/f/mdkkbvzv" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+}
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Phoenix Precision Auto. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://www.instagram.com/phoenixprecisionauto" target="_blank">
-                    <img src="instagram-icon.png" alt="Instagram">
-                </a>
-                <a href="https://www.tiktok.com/@phoenix.precision.auto" target="_blank">
-                    <img src="tiktok-icon.png" alt="TikTok">
-                </a>
-                <a href="https://youtube.com/@phoenixprecisionauto" target="_blank">
-                    <img src="youtube-icon.png" alt="YouTube">
-                </a>
-                <a href="https://www.facebook.com/share/1BHVRDdvVX/" target="_blank">
-                    <img src="facebook-icon.png" alt="Facebook">
-                </a>
-            </div>
-        </div>
-    </footer>
+form input, form textarea, form button {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    font-size: 1rem;
+}
 
-    <script src="script.js" defer></script>
-</body>
-</html>
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer .social-media a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero, #pricing, .pricing-item {
+        padding: 2rem 1rem;
+    }
+
+    form label, form input, form textarea, form button {
+        width: 95%;
+    }
+}
